@@ -1,5 +1,5 @@
 const socketIOClient = require("socket.io-client");
-const socket = socketIOClient("https://bus-oucf.onrender.com:10000");
+const socket = socketIOClient("https://bus-oucf.onrender.com");
 
 // Event: Connection established with the server
 socket.on("connect", () => {
