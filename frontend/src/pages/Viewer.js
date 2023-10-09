@@ -12,16 +12,17 @@ function Viewer() {
     return () => {
       socket.off("userValues");
     };
-  }, [userValues]);
+  }, []);
 
   return (
     <div>
       <h1>Viewer Page</h1>
       <h2>User Values:</h2>
       <ul>
-        {Object.entries(userValues).map(([socketId, value]) => (
+        {Object.entries(userValues).map(([socketId, values]) => (
           <li key={socketId}>
-            Socket ID: {socketId}, Value: {value}
+            Socket ID: {socketId}, Latitude: {values.latitude}, Longitude:{" "}
+            {values.longitude}
           </li>
         ))}
       </ul>
