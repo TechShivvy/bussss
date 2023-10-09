@@ -26,9 +26,9 @@ function Driver() {
   };
 
   useEffect(() => {
-    fetchAndSendLocation(); // Initial call
+    fetchAndSendLocation();
     const interval = setInterval(() => {
-      fetchAndSendLocation(); // Call every 5 seconds
+      fetchAndSendLocation();
     }, 5000);
 
     return () => {
